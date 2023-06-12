@@ -1,17 +1,12 @@
+import { Button, Header } from './components';
+import * as S from './styles/main.style';
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <S.Page>
+      <Header />
+      <Button text="NEW GAME" hover />
+    </S.Page>
   );
 }
 

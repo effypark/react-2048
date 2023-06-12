@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 
@@ -24,25 +24,14 @@ h1 {
   margin: 0;
 }
 
-button {
-  background: #8f7a66;
-  color: white;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  padding: 10px 20px;
-  font-size: 1.1rem;
-  border-radius: 6px;
-  transition: var(--animation-duration) ease-in-out all;
+h3 {
+  font-size: 1rem;
+  margin: 0;
+}
 
-  &:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
-
-  &:not(:disabled):hover {
-    opacity: 0.8;
-  }
+p {
+  margin: 0;
+  padding: 0;
 }
 
 
