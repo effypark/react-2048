@@ -4,24 +4,44 @@ export const Header = () => {
   return (
     <S_Header>
       <h1>2048</h1>
-      <Score>
-        <h3>score</h3>
-        <p>3000</p>
-      </Score>
-      <Score>
-        <h3>best</h3>
-        <p>3400</p>
-      </Score>
+      <ScoreBox>
+        <Score>
+          <h3>score</h3>
+          <p>3000</p>
+        </Score>
+        <Score>
+          <h3>best</h3>
+          <p>3400</p>
+        </Score>
+      </ScoreBox>
     </S_Header>
   );
 };
 
 const S_Header = styled.header`
+  min-width: 340px;
   ${({ theme }) => theme.mixins.flexBox('row', 'center', 'space-between')};
+
+  h1 {
+    @media screen and (max-width: 500px) {
+      font-size: 3rem;
+    }
+  }
+`;
+
+const ScoreBox = styled.div`
+  width: 100%;
+  ${({ theme }) => theme.mixins.flexBox('row', 'center', 'end')};
+
+  div {
+    &:first-child {
+      margin-right: 10px;
+    }
+  }
 `;
 
 const Score = styled.div`
-  width: 120px;
+  width: 40%;
   height: 54px;
   border-radius: 6px;
   background-color: ${({ theme }) => theme.color.lightBrown};

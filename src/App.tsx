@@ -1,11 +1,11 @@
-import { Button, Header } from './components';
+import { Header, Sub } from './components';
 import * as S from './styles/main.style';
 
 function App() {
   return (
     <S.Page>
       <Header />
-      <Button text="NEW GAME" hover />
+      <Sub />
     </S.Page>
   );
 }
